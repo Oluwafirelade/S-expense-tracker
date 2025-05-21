@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Lato', sans-serif;
+    padding: 20px;
 }
 
 .container {
@@ -101,106 +102,76 @@ input {
     padding: 10px;
     font-size: 16px;
 }
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-:root {
-    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+/* ========================
+   Media Queries
+======================== */
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .money {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    input {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
 }
 
-* {
-    box-sizing: border-box;
-}
+/* Mobile phones (≤ 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
 
-body {
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-}
+    .inc-exp-container {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.container {
-    margin: 30px auto;
-    width: 350px;
-}
+    .money {
+        font-size: 16px;
+    }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
-}
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
 
-.headc {
-    color: #1fcc67;
-}
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
 
-h3 {
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 10px;
-    margin: 40px 0 10px;
-}
+    h1, h2 {
+        font-size: 1.5rem;
+    }
 
-.inc-exp-container {
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
+    h3 {
+        font-size: 1.1rem;
+    }
 
-.inc-exp-container > div {
-    flex: 1;
-    text-align: center;
-}
-
-.money {
-    font-size: 20px;
-    margin: 5px 0;
-}
-
-.money.plus {
-    color: #2ecc71;
-}
-
-.money.minus {
-    color: #c0392b;
-}
-
-.list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.list li {
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    margin: 5px 0;
-}
-
-.btn {
-    cursor: pointer;
-    background-color: #9c88ff;
-    color: #fff;
-    border: 0;
-    font-size: 16px;
-    margin: 10px 0 30px;
-    padding: 10px;
-    width: 100%;
-}
-
-.form-control {
-    margin-bottom: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    .list li {
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
